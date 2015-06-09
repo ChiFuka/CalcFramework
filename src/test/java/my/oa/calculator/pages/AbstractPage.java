@@ -2,9 +2,7 @@ package my.oa.calculator.pages;
 
 import org.openqa.selenium.WebDriver;
 
-
-
-public class AbstractPage {
+public abstract class AbstractPage {
 
     private WebDriver driver;
 

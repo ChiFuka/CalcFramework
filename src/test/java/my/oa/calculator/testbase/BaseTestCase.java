@@ -21,14 +21,5 @@ public class BaseTestCase extends TestBase{
          
      }
 
-	public BaseTestCase() {
-		// TODO Auto-generated constructor stub
-		//@BeforeClass
-		//@BeforeMethod
-		//@PageFactory
-		
-		
-	}
-
 
 }
