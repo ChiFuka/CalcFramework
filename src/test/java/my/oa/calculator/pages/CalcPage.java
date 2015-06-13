@@ -14,11 +14,47 @@ public class CalcPage extends AbstractPage{
 	        PageFactory.initElements(driver, this);
 	    }
 	   
-	//  Identificators
+	//Identificators
+	    @FindBy (xpath="//input[@name='a']")
+	    private WebElement inputA;
+
+	    @FindBy (xpath="//input[@name='b']")
+	    private WebElement inputB;
+	    
+	    @FindBy (xpath="//input[@value='plus']")
+	    private WebElement actionPlus;
+	    
+	    @FindBy (xpath="//input[@value='minus']")
+	    private WebElement actionMinus;
+	    
+	    @FindBy (xpath="//input[@value='mult']")
+	    private WebElement actionMult;
+	  
+	    @FindBy (xpath="//input[@value='division']")
+	    private WebElement actionDivision;
+	    
+	    @FindBy (xpath="//div[@name='result']")
+	    private WebElement result;
+	    
+	    @FindBy (xpath="//input[@value='Calculate']")
+	    private WebElement actionSubmit;
+	    
 	// Methods
 	   public CalcPage open(String url) {
-	        getDriver().get(url);
+		    getDriver().get(url);
 	        return this;
 	    }
+	   public String getResult(){
+		   return result.getText();
+	   }
+	   public String sum(String A, String B) {
+		   inputA.sendKeys(A);
+		   inputB.sendKeys(B);
+		   actionPlus.click();
+		   actionSubmit.click();
+		   return getResult();
+		   
+		   
+	   }
 
 }

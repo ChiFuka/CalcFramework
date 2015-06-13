@@ -47,7 +47,7 @@ public class TestBase {
 	}
 	
 	public WebDriver createFirefox() {
-		WebDriver driver = new FirefoxDriver();
+		driver = new FirefoxDriver();
 		return driver;
 	}
 	
@@ -57,7 +57,7 @@ public class TestBase {
 	}
 	
 	public WebDriver createChrome() {
-		WebDriver driver = new ChromeDriver();
+		driver = new ChromeDriver();
 		return driver;
 	}
 	
